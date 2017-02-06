@@ -8,7 +8,11 @@ module.exports = {
 
     // linting rules settings
     rules: {
-        'array-bracket-spacing': ['error', 'never'],
+        'array-bracket-spacing': ['error', 'always', {
+            'singleValue': false,
+            'objectsInArrays': false,
+            'arraysInArrays': false
+        }],
         'block-spacing': ['error', 'always'],
         'brace-style': ['error', '1tbs', {
             'allowSingleLine': true
@@ -51,8 +55,9 @@ module.exports = {
         }],
         'object-curly-spacing': ['error', 'always'],
         'semi': ['error', 'always'],
-        'space-infix-ops': 'error',
         'space-before-blocks': 'error',
+        'space-infix-ops': 'error',
+        'space-in-parens': [ 'error', 'always' ],
         'semi-spacing': ['error', { 'before': false, 'after': true }]
     }
 
