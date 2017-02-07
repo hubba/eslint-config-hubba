@@ -18,7 +18,6 @@ module.exports = {
             'before': false, 'after': true
         }],
         'comma-style': ['error', 'last'],
-        'computed-property-spacing': ['error', 'never'],
         'eol-last': ['error', 'always'],
         'indent': ['error', 4, {
             'SwitchCase': 1,
