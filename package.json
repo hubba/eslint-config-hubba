@@ -1,6 +1,6 @@
 {
   "name": "@hubba/eslint-config-hubba",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shareable ESLint config as per Hubba's styleguide",
   "main": "index.js",
   "scripts": {
