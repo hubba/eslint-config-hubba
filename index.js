@@ -20,6 +20,7 @@ module.exports = {
         'comma-style': ['error', 'last'],
         'eol-last': ['error', 'always'],
         'indent': ['error', 4, {
+            'MemberExpression': 0,
             'SwitchCase': 1,
             'VariableDeclarator': 1,
             'outerIIFEBody': 1,
@@ -30,7 +31,7 @@ module.exports = {
             'FunctionExpression': {
                 'parameters': 1,
                 'body': 1
-            }
+            },
         }],
         'linebreak-style': ['error', 'unix'],
         'key-spacing': ['error', { 'beforeColon': false, 'afterColon': true }],
