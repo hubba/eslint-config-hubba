@@ -1,10 +1,15 @@
 module.exports = {
+    env: {
+        'jasmine': true
+    },
 
     // set this as the base `.eslint` file
     root: true,
 
     // start with a sane baseline
     extends: 'eslint:recommended',
+
+    plugins: ['jasmine'],
 
     // linting rules settings
     rules: {
@@ -55,7 +60,9 @@ module.exports = {
         'space-before-blocks': 'error',
         'space-infix-ops': 'error',
         'space-in-parens': ['error', 'never'],
-        'semi-spacing': ['error', { 'before': false, 'after': true }]
+        'semi-spacing': ['error', { 'before': false, 'after': true }],
+        'jasmine/no-disabled-tests': 2,
+        'jasmine/no-focused-tests': 2
     }
 
 };
