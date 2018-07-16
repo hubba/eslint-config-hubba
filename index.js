@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-        'jasmine': true
+        jasmine: true
     },
 
     // set this as the base `.eslint` file
@@ -16,53 +16,54 @@ module.exports = {
         'array-bracket-spacing': ['error', 'never'],
         'block-spacing': ['error', 'always'],
         'brace-style': ['error', '1tbs', {
-            'allowSingleLine': true
+            allowSingleLine: true
         }],
-        'camelcase': ['error', { 'properties': 'never' }],
+        camelcase: ['error', { properties: 'never' }],
         'comma-spacing': ['error', {
-            'before': false, 'after': true
+            before: false, after: true
         }],
         'comma-style': ['error', 'last'],
         'eol-last': ['error', 'always'],
-        'indent': ['error', 4, {
-            'MemberExpression': 0,
-            'SwitchCase': 1,
-            'VariableDeclarator': 1,
-            'outerIIFEBody': 1,
-            'FunctionDeclaration': {
-                'parameters': 1,
-                'body': 1
+        indent: ['error', 4, {
+            FunctionDeclaration: {
+                body: 1,
+                parameters: 1
             },
-            'FunctionExpression': {
-                'parameters': 1,
-                'body': 1
+            FunctionExpression: {
+                parameters: 1,
+                body: 1
             },
+            MemberExpression: 0,
+            outerIIFEBody: 1,
+            SwitchCase: 1,
+            VariableDeclarator: 1
         }],
+        'jasmine/no-disabled-tests': 2,
+        'jasmine/no-focused-tests': 2,
+        'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+        'keyword-spacing': ['error', { before: true, after: true }],
         'linebreak-style': ['error', 'unix'],
-        'key-spacing': ['error', { 'beforeColon': false, 'afterColon': true }],
-        'keyword-spacing': ['error', { 'before': true, 'after': true }],
         'no-console': 'off',
         'no-inline-comments': 'off',
-        'no-multi-spaces': 'error',
         'no-multiple-empty-lines': ['error', {
-            'max': 2, 'maxEOF': 1
+            max: 2, maxEOF: 1
         }],
         'no-mixed-spaces-and-tabs': 'error',
-        'no-trailing-spaces': 'error',
+        'no-multi-spaces': 'error',
         'no-spaced-func': 'error',
-        'quotes': ['error', 'single', { 'avoidEscape': true }],
-        'space-before-function-paren': ['error', {
-            'anonymous': 'never',
-            'named': 'never'
-        }],
+        'no-trailing-spaces': 'error',
         'object-curly-spacing': ['error', 'always'],
-        'semi': ['error', 'always'],
+        quotes: ['error', 'single', { avoidEscape: true }],
+        'quote-props': ['error', 'as-needed'],
+        semi: ['error', 'always'],
+        'semi-spacing': ['error', { before: false, after: true }],
         'space-before-blocks': 'error',
-        'space-infix-ops': 'error',
+        'space-before-function-paren': ['error', {
+            anonymous: 'never',
+            named: 'never'
+        }],
         'space-in-parens': ['error', 'never'],
-        'semi-spacing': ['error', { 'before': false, 'after': true }],
-        'jasmine/no-disabled-tests': 2,
-        'jasmine/no-focused-tests': 2
+        'space-infix-ops': 'error'
     }
 
 };
