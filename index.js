@@ -25,6 +25,7 @@ module.exports = {
         }],
         'comma-style': ['error', 'last'],
         'eol-last': ['error', 'always'],
+        'global-require': 'error',
         indent: ['error', 4, {
             FunctionDeclaration: {
                 body: 1,
@@ -51,9 +52,11 @@ module.exports = {
             max: 2, maxEOF: 1
         }],
         'no-mixed-spaces-and-tabs': 'error',
+        'no-multiple-empty-lines': 'error',
         'no-multi-spaces': 'error',
         'no-spaced-func': 'error',
         'no-trailing-spaces': 'error',
+        'no-use-before-define': 'nofunc',
         'no-useless-escape': 'off',
         'no-var': 'error',
         'object-curly-spacing': ['error', 'always'],
@@ -69,6 +72,7 @@ module.exports = {
             named: 'never'
         }],
         'space-in-parens': ['error', 'never'],
-        'space-infix-ops': 'error'
+        'space-infix-ops': 'error',
+        'strict': 'never'
     }
 };
