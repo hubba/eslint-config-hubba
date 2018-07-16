@@ -44,6 +44,7 @@ module.exports = {
         'keyword-spacing': ['error', { before: true, after: true }],
         'linebreak-style': ['error', 'unix'],
         'no-console': 'off',
+        'no-dupe-keys': 'error',
         'no-inline-comments': 'off',
         'no-multiple-empty-lines': ['error', {
             max: 2, maxEOF: 1
