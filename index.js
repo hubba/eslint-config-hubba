@@ -24,6 +24,7 @@ module.exports = {
             before: false, after: true
         }],
         'comma-style': ['error', 'last'],
+        curly: ['error', 'all'],
         'eol-last': ['error', 'always'],
         'global-require': 'error',
         indent: ['error', 4, {
