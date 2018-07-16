@@ -1,17 +1,13 @@
 module.exports = {
     env: {
-        jasmine: true
+        jasmine: true,
+        node: true
     },
-
-    // set this as the base `.eslint` file
-    root: true,
-
     // start with a sane baseline
     extends: 'eslint:recommended',
-
     plugins: ['jasmine'],
-
-    // linting rules settings
+    // set this as the base `.eslint` file
+    root: true,
     rules: {
         'array-bracket-spacing': ['error', 'never'],
         'block-spacing': ['error', 'always'],
@@ -67,5 +63,4 @@ module.exports = {
         'space-in-parens': ['error', 'never'],
         'space-infix-ops': 'error'
     }
-
 };
