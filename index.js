@@ -5,6 +5,10 @@ module.exports = {
     },
     // start with a sane baseline
     extends: 'eslint:recommended',
+    parserOptions: {
+        ecmaVersion: 9,
+        sourceType: 'module',
+    },
     plugins: ['jasmine'],
     // set this as the base `.eslint` file
     root: true,
@@ -49,6 +53,7 @@ module.exports = {
         'no-multi-spaces': 'error',
         'no-spaced-func': 'error',
         'no-trailing-spaces': 'error',
+        'no-useless-escape': 'off',
         'no-var': 'error',
         'object-curly-spacing': ['error', 'always'],
         quotes: ['error', 'single', { avoidEscape: true }],
