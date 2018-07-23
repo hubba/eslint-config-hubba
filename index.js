@@ -57,7 +57,7 @@ module.exports = {
     'no-useless-escape': 'off',
     'no-var': 'error',
     'object-curly-spacing': ['error', 'always'],
-    'one-var': 'error',
+    'one-var': ['error', 'never'],
     'prefer-template': 'error',
     quotes: ['error', 'single', { avoidEscape: true }],
     'quote-props': ['warn', 'as-needed'],
