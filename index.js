@@ -43,6 +43,7 @@ module.exports = {
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
     'linebreak-style': ['error', 'unix'],
+    'lines-between-class-members': ['error', 'always'],
     'no-console': 'off',
     'no-dupe-keys': 'error',
     'no-inline-comments': 'off',
