@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-hubba",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Shareable ESLint config as per Hubba's styleguide",
   "main": "index.js",
   "scripts": {
@@ -26,9 +26,16 @@
     "eslint": ">=3"
   },
   "dependencies": {
-    "eslint-plugin-jasmine": "^2.9.2"
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-jasmine": "^2.9.2",
+    "eslint-plugin-jest": "^23.0.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-simple-import-sort": "^4.0.0",
+    "prettier": "^1.18.2"
   },
   "devDependencies": {
-    "eslint": "^4.18.1"
+    "eslint": "^6.6.0"
   }
 }

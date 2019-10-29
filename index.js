@@ -1,76 +1,84 @@
 module.exports = {
   env: {
-    es6: true,
-    jasmine: true,
-    node: true
+    node: true,
+    'jest/globals': true,
   },
-  extends: 'eslint:recommended',
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
   parserOptions: {
-    ecmaVersion: 9,
-    sourceType: 'module',
+    parser: '@typescript-eslint/parser',
   },
-  plugins: ['jasmine'],
+  plugins: ['@typescript-eslint', 'prettier', 'simple-import-sort', 'jest'],
   rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
     'array-bracket-spacing': ['error', 'never'],
     'block-spacing': ['error', 'always'],
-    'brace-style': ['error', '1tbs', {
-      allowSingleLine: true
-    }],
+    'brace-style': [
+      'error',
+      '1tbs',
+      {
+        allowSingleLine: true,
+      },
+    ],
     camelcase: ['error', { properties: 'never' }],
-    'comma-spacing': ['error', {
-      before: false, after: true
-    }],
+    'comma-spacing': [
+      'error',
+      {
+        before: false,
+        after: true,
+      },
+    ],
     'comma-style': ['error', 'last'],
     curly: ['error', 'all'],
     'eol-last': ['error', 'always'],
     'global-require': 'error',
-    indent: ['warn', 2, {
-      FunctionDeclaration: {
-        body: 1,
-        parameters: 1
-      },
-      FunctionExpression: {
-        parameters: 1,
-        body: 1
-      },
-      MemberExpression: 0,
-      outerIIFEBody: 1,
-      SwitchCase: 1,
-      VariableDeclarator: 1
-    }],
-    'jasmine/no-disabled-tests': 2,
-    'jasmine/no-focused-tests': 2,
+    // handled by prettier
+    indent: 'off',
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
     'linebreak-style': ['error', 'unix'],
     'lines-between-class-members': ['error', 'always'],
-    'no-console': 'off',
     'no-dupe-keys': 'error',
     'no-inline-comments': 'off',
     'no-mixed-spaces-and-tabs': 'error',
     'no-multi-spaces': 'error',
-    'no-multiple-empty-lines': ['error', {
-      max: 2, maxEOF: 1
-    }],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 2,
+        maxEOF: 1,
+      },
+    ],
     'no-spaced-func': 'error',
     'no-trailing-spaces': 'error',
     'no-use-before-define': ['error', 'nofunc'],
     'no-useless-escape': 'off',
     'no-var': 'error',
     'object-curly-spacing': ['error', 'always'],
-    'one-var': ['error', 'never'],
     'prefer-template': 'error',
-    quotes: ['error', 'single', { avoidEscape: true }],
+    'prettier/prettier': 'error',
+    quotes: [
+      'error',
+      'single',
+      { avoidEscape: true, allowTemplateLiterals: false },
+    ],
     'quote-props': ['warn', 'as-needed'],
     semi: ['error', 'always'],
     'semi-spacing': ['error', { before: false, after: true }],
+    'simple-import-sort/sort': 'error',
     'space-before-blocks': 'error',
-    'space-before-function-paren': ['error', {
-      anonymous: 'never',
-      named: 'never'
-    }],
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+      },
+    ],
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': 'error',
-    strict: ['error', 'never']
-  }
+    strict: ['error', 'never'],
+  },
 };
