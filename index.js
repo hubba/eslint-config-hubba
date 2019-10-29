@@ -3,15 +3,24 @@ module.exports = {
     node: true,
     'jest/globals': true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+  plugins: [
+    '@typescript-eslint',
+    'cypress',
+    'simple-import-sort',
+    'jest',
     'prettier',
+  ],
+  extends: [
+    '@nuxtjs/eslint-config-typescript',
+    'eslint:recommended',
+    'plugin:cypress/recommended',
+    'prettier',
+    'prettier/vue',
+    'prettier/@typescript-eslint'
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },
-  plugins: ['@typescript-eslint', 'prettier', 'simple-import-sort', 'jest'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'array-bracket-spacing': ['error', 'never'],
@@ -35,6 +44,7 @@ module.exports = {
     curly: ['error', 'all'],
     'eol-last': ['error', 'always'],
     'global-require': 'error',
+    'import/order': 'off',
     // handled by prettier
     indent: 'off',
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
