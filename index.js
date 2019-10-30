@@ -76,7 +76,8 @@ module.exports = {
       { avoidEscape: true, allowTemplateLiterals: false },
     ],
     'quote-props': ['warn', 'as-needed'],
-    semi: ['error', 'always'],
+    // handled by prettier
+    semi: 'off',
     'semi-spacing': ['error', { before: false, after: true }],
     'simple-import-sort/sort': 'error',
     'space-before-blocks': 'error',
