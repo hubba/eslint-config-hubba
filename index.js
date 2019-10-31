@@ -1,7 +1,6 @@
 module.exports = {
   env: {
     node: true,
-    'jest/globals': true,
   },
   plugins: [
     '@typescript-eslint',
@@ -14,12 +13,16 @@ module.exports = {
     '@nuxtjs/eslint-config-typescript',
     'eslint:recommended',
     'plugin:cypress/recommended',
+    'plugin:jest/recommended',
     'prettier',
     'prettier/vue',
     'prettier/@typescript-eslint'
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
