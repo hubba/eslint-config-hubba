@@ -50,6 +50,7 @@ module.exports = {
     'import/order': 'off',
     // handled by prettier
     indent: 'off',
+    'jest/expect-expect': 'off',
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
     'linebreak-style': ['error', 'unix'],
