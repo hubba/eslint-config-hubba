@@ -2,13 +2,7 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: [
-    '@typescript-eslint',
-    'cypress',
-    'simple-import-sort',
-    'jest',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'cypress', 'simple-import-sort', 'jest', 'prettier'],
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'eslint:recommended',
@@ -16,13 +10,13 @@ module.exports = {
     'plugin:jest/recommended',
     'prettier',
     'prettier/vue',
-    'prettier/@typescript-eslint'
+    'prettier/@typescript-eslint',
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -74,11 +68,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'prefer-template': 'error',
     'prettier/prettier': 'error',
-    quotes: [
-      'error',
-      'single',
-      { avoidEscape: true, allowTemplateLiterals: false },
-    ],
+    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
     'quote-props': ['warn', 'as-needed'],
     // handled by prettier
     semi: 'off',
@@ -96,4 +86,14 @@ module.exports = {
     'space-infix-ops': 'error',
     strict: ['error', 'never'],
   },
+  overrides: [
+    {
+      files: ['*.d.ts'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
+        'no-unused-vars': 'off',
+        'no-undef': 'off',
+      },
+    },
+  ],
 };
