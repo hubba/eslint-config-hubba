@@ -10,13 +10,6 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
   ],
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    ecmaFeatures: {
-      jsx: true,
-      modules: true,
-    },
-  },
   rules: {
     'no-undef': 'off', // typescript handles it
     'no-unused-vars': 'off', // @typescript-eslint/no-unused-vars is enabled
