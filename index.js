@@ -2,25 +2,45 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: ['@typescript-eslint', 'cypress', 'simple-import-sort', 'jest', 'prettier'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'jest', 'prettier'],
   extends: [
-    '@nuxtjs/eslint-config-typescript',
     'eslint:recommended',
-    'plugin:cypress/recommended',
     'plugin:jest/recommended',
     'prettier',
-    'prettier/vue',
     'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
   },
   rules: {
+    'no-undef': 'off', // typescript handles it
+    'no-unused-vars': 'off', // @typescript-eslint/no-unused-vars is enabled
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      { typedefs: false, ignoreTypeReferences: true, functions: false },
+    ],
+    '@typescript-eslint/no-explicit-any': [
+      'error',
+      {
+        fixToUnknown: true,
+        ignoreRestArgs: true,
+      },
+    ],
     '@typescript-eslint/explicit-function-return-type': 'off',
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': ['error'],
     'array-bracket-spacing': ['error', 'never'],
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: 'block-like', next: '*' },
+    ],
     'block-spacing': ['error', 'always'],
     'brace-style': [
       'error',
@@ -42,8 +62,6 @@ module.exports = {
     'eol-last': ['error', 'always'],
     'global-require': 'error',
     'import/order': 'off',
-    // handled by prettier
-    indent: 'off',
     'jest/expect-expect': 'off',
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': ['error', { before: true, after: true }],
@@ -62,38 +80,21 @@ module.exports = {
     ],
     'no-spaced-func': 'error',
     'no-trailing-spaces': 'error',
-    'no-use-before-define': ['error', 'nofunc'],
     'no-useless-escape': 'off',
     'no-var': 'error',
     'object-curly-spacing': ['error', 'always'],
     'prefer-template': 'error',
-    'prettier/prettier': 'error',
-    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
+    quotes: [
+      'error',
+      'single',
+      { avoidEscape: true, allowTemplateLiterals: false },
+    ],
     'quote-props': ['warn', 'as-needed'],
-    // handled by prettier
-    semi: 'off',
     'semi-spacing': ['error', { before: false, after: true }],
     'simple-import-sort/sort': 'error',
     'space-before-blocks': 'error',
-    'space-before-function-paren': [
-      'error',
-      {
-        anonymous: 'never',
-        named: 'never',
-      },
-    ],
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': 'error',
     strict: ['error', 'never'],
   },
-  overrides: [
-    {
-      files: ['*.d.ts'],
-      rules: {
-        '@typescript-eslint/no-unused-vars': 'off',
-        'no-unused-vars': 'off',
-        'no-undef': 'off',
-      },
-    },
-  ],
 };
