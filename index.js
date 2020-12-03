@@ -89,5 +89,6 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': 'error',
     strict: ['error', 'never'],
+    'max-params': ['warn', 3],
   },
 };
